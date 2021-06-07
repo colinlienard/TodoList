@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Clock } from "./components/Clock";
+import { TodoList } from "./components/TodoList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <header className="header">
+                <img className="logo" src="/assets/logo.svg" alt="" />
+                <Clock/>
+            </header>
+            <div className="gradient-1"/>
+            <div className="gradient-2"/>
+            <TodoList/>
+            <footer className="footer">
+                <p>Site créé en React par <a href="https://colin-lienard.fr/">Colin Lienard</a></p>
+            </footer>
+        </>
+    )
 }
 
 export default App;
