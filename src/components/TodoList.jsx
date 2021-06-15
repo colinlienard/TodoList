@@ -5,7 +5,7 @@ import { AddTodo } from "./AddTodo";
 let LAST_ID = 0;
 
 export const TodoList = () => {
-    const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem("todos")));
+    const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) !== null ? JSON.parse(localStorage.getItem("todos")) : []);
     const [todos1, setTodos1] = useState(todos.filter(todo1 => todo1.importance === "1" && !todo1.checked));
     const [todos2, setTodos2] = useState(todos.filter(todo2 => todo2.importance === "2" && !todo2.checked));
     const [todos3, setTodos3] = useState(todos.filter(todo3 => todo3.importance === "3" && !todo3.checked));
